@@ -1,4 +1,5 @@
-public class Rectangulo implements Figura{ // Extends es para heredar 
+public class Rectangulo implements Figura{ // Extends es para heredar de clases------ Implements es para interfaces
+											//Con implements puedo usar implementar de muchas interfaces, mientras que el extends solo de una clase
 	protected double 	largo,
 						ancho;
 					
@@ -29,14 +30,14 @@ public class Rectangulo implements Figura{ // Extends es para heredar
 		return "Rectangulo de Largo: " + this.ancho + "y Ancho: " + this.ancho;
 	}
 	
-	
 	public static void main(String[] args){
-		Figura[] figuras ={/*new figura(), ya no puedo instanciar figura porque ahora es interface*/ new Rectangulo(), new Rectangulo(4.0,5.0), new Cuadrado(5.0), new Caja()};
+		Figura[] figuras= {new Rectangulo(), new Caja(), new Rectangulo(6.0,4.0), new Cuadrado(10), new Caja(10.0, 15.3, 20)}; /*new figura(), ya no puedo instanciar figura porque ahora es interface*/
 		for(int i=0; i<figuras.length;i++){
 			System.out.println(figuras[i]);
 			System.out.println("Perimetro: "+figuras[i].perimetro()); //--> Polimorfismo
 			System.out.println("Area: "+figuras[i].area());
 			System.out.println("Volumen: "+figuras[i].volumen());
+
 			if(figuras[i] instanceof Caja){
 				((Caja)figuras[i]).saluda();
 			}
@@ -55,9 +56,20 @@ public class Rectangulo implements Figura{ // Extends es para heredar
 		System.out.println("Area: " +b.area());
 		System.out.println("Volumen: " +b.volumen());
 		
-		Cuadrado c=new Cuadrado(5.0);
-		System.out.println("Perimetro: " +c.perimetro());
-		System.out.println("Area: " +c.area());
-		System.out.println("Volumen: " +c.volumen());
+		Cuadrado d=new Caja(10.0, 15.3, 20.0);
+		System.out.println("Perimetro: " + d.perimetro());
+		System.out.println("Area: " + d.area());
+		System.out.println("Volumen: " + d.volumen());
 	}
 }
+
+//Un error comun ClassCast Exception
+
+/* Metodo compare to:
+
+	a.compareTo(b);
+
+	0 -> a == b
+	>0 -> a>b
+	<0 -> a<b
+	*/

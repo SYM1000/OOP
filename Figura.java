@@ -12,9 +12,12 @@ protected es in hibrido entre provado y publico solo clases hija pueden acceder
 
 metodos de clase Object
 
+la herencia es una rewlacion de tipo "Es un ..."
 */
 
 //NO CREAR PAQUETES EN ECLIPSE solo proyectos
+
+//Una interface no puede teener implementacion de metodos, por lo tanto no puede tener un metodo main
 
 public interface Figura{ // ya no es clase
 	public double perimetro();/*{
@@ -28,10 +31,20 @@ public interface Figura{ // ya no es clase
 	public double volumen();/*{
 		return 0.0;
 	}*/
-	
-	public String toString();/*{
-		return "Figura abstracta";
+
+	/*public String toString(){
+		return "Clase Figura Abstracta"
 	}*/
 	
+	public static void main(String[] args) {
+		Figura[] figuras= {new Figura(), new Rectangulo(6.0,4.0), new Cuadrado(10), new Caja(10.0, 15.3, 20)} 
+		for (int i = o; i<figuras.length;i++){
+			System.out.println(figuras[i]);
+			System.out.println("Perimetro: "+figuras[i].perimetro()); //--> Polimorfismo
+			System.out.println("Area: "+figuras[i].area());
+			System.out.println("Volumen: "+figuras[i].volumen());
+			System.out.println("");
+		}
+	}
 	/*Aqui ya no pueden ir metodos con implementacion no main*/
 }

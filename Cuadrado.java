@@ -8,7 +8,7 @@ public class Cuadrado extends Rectangulo{
 		*/
 	}
 	public Cuadrado(){
-		this(4.0);
+		this(5.0);
 	}
 	
 	public String toString(){
