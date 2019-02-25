@@ -5,23 +5,33 @@ public class Caja extends Rectangulo{
 		super(largo,ancho);
 		this.alto=alto;
 	}
+
+	//Uso el super solo para metodos cuando se quiere sobreescribir 
 	
 	public Caja(){
-		this(6.0,4.0,8.0);
+		this(3.0,7.0,9.0);
 	}
+
 	public double perimetro(){
-		return 4*(alto+ancho+largo);
+		return (8 * this.alto) + (4 * this.largo) + (2 * this.ancho);
 	}
+
 	public double area(){
-		return 2*((this.ancho*this.largo)+(this.ancho*this.alto)+(this.largo*this.alto));
+		return 2.0*(this.largo * this.ancho + this.alto*this.largo + this.ancho * this.alto);
 	}
-	public double volumen(){
-		return this.area()*this.alto;
+
+	public double volumen() {
+		return super.area() * this.alto;
 	}
-	public String toString(){
-		return"caja de largo: "+this.largo+"ancho: "+this.ancho+"largo: "+this.largo;
+
+	public String ToString(){
+		return "Caja de largo " this.largo + ", ancho " + this.ancho + " y altura " + this.alto;
 	}
+
 	public void saluda(){
-		System.out.println("Soy una caja feliz :)");
+		return "Hola! Soy una caja feliz :)"
 	}
+
+
+
 }
