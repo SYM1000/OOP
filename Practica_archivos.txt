@@ -1,0 +1,14 @@
+Hola mundo
+Estoy Escribiendo un archivo
+
+Aqui te va un for para imprimir
+Numero0
+Numero1
+Numero2
+Numero3
+Numero4
+Numero5
+Numero6
+Numero7
+Numero8
+Numero9

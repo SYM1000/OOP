@@ -1,0 +1,7 @@
+Programa creado para estudiar Java
+-----------------------------------
+El nombre es: 
+bebe
+Las cordenadas del cuadrado son:
+336
+376
