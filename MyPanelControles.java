@@ -43,7 +43,11 @@ public class MyPanelControles extends JPanel implements ActionListener, ChangeLi
 		this.pd=pd;
 		this.tfNombre=new JTextField(10);
 		this.btnNombre=new JButton("Saluda");
-		this.btnNombre.addActionListener(this);
+		this.btnNombre.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				//this.pd.setNombre(this.tfNombre.getText());
+			}
+		});
 		
 		this.rbRojo=new JRadioButton("Color Rojo", true);
 		this.rbVerde=new JRadioButton("Color Verde");
