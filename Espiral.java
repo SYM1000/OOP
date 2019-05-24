@@ -112,9 +112,7 @@ public class Espiral extends JPanel implements ActionListener {
 		
 		
 	}
-	
-	
-	
+
 	public void setLados(int lados) {
 		this.lados = lados;
 	}
